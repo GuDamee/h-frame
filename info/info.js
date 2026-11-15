@@ -17,6 +17,29 @@
     return `<a class="btn ${b.cls}" href="${href}"${isReal(href) ? ' target="_blank" rel="noopener"' : ''}>
       <span class="ico">${ICON[b.link]}</span><span class="txt"><strong>${b.t}</strong><small>${b.s}</small></span><span class="arr">→</span></a>`;
   };
+  /* livello di lettura nelle schede AI / Cyber: "prime armi" (base) o "ne so già qualcosa" (specifico) */
+  const lvlKey = c => 'hframe-level-' + c;
+  const getLvl = c => { try { return localStorage.getItem(lvlKey(c)) === 'pro' ? 'pro' : 'basic'; } catch (e) { return 'basic'; } };
+  const levelUI = (t, b) => {
+    const l = getLvl(b.cls), qid = 'lq-' + b.cls;
+    return `<div class="lvl" role="group" aria-labelledby="${qid}"><p class="lvl-q" id="${qid}">${t.levelQ}</p>
+      <div class="lvl-btns"><button type="button" data-lvl="basic" aria-pressed="${l === 'basic'}">${t.levelBasic}</button><button type="button" data-lvl="pro" aria-pressed="${l === 'pro'}">${t.levelPro}</button></div></div>
+      <div class="lvl-body" aria-live="polite"><p data-basic="${b.basic.replace(/"/g, '&quot;')}" data-pro="${b.text.replace(/"/g, '&quot;')}">${l === 'pro' ? b.text : b.basic}</p></div>`;
+  };
+  document.addEventListener('click', e => {
+    const bt = e.target.closest('.lvl-btns button'); if (!bt || bt.getAttribute('aria-pressed') === 'true') return;
+    const card = bt.closest('.card'), cls = ['ai', 'cyber'].find(c => card.classList.contains(c)), lvl = bt.dataset.lvl;
+    try { localStorage.setItem(lvlKey(cls), lvl); } catch (err) {}
+    $$('.lvl-btns button', card).forEach(x => x.setAttribute('aria-pressed', x === bt));
+    const body = $('.lvl-body', card), p = $('p', body), swap = () => { p.textContent = p.dataset[lvl]; };
+    if (RM || !body.animate) { swap(); return; }
+    const h0 = body.offsetHeight;
+    p.animate([{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(-6px)' }], { duration: 160, easing: 'ease-in', fill: 'forwards' }).onfinish = () => {
+      swap(); const h1 = body.offsetHeight;
+      body.animate([{ height: h0 + 'px' }, { height: h1 + 'px' }], { duration: 320, easing: 'cubic-bezier(.2,.8,.2,1)' });
+      p.animate([{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], { duration: 320, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'forwards' });
+    };
+  });
   const kicker = (i, k) => `<p class="kicker">${String(i + 1).padStart(2, '0')} — ${k}</p>`;
 
   function render(lang) {
@@ -45,7 +68,7 @@
       ${kicker(n('branche'), t.s.branche)}
       <h2 class="reveal">${t.branchesTitle}</h2>
       <div class="cards">${t.branches.map(b => `
-        <article class="card ${b.cls} reveal"><h3><span class="emo" aria-hidden="true">${b.icon}</span>${b.name}</h3><p>${b.text}</p></article>`).join('')}
+        <article class="card ${b.cls} reveal"><h3><span class="emo" aria-hidden="true">${b.icon}</span>${b.name}</h3>${b.basic ? levelUI(t, b) : `<p>${b.text}</p>`}</article>`).join('')}
       </div>
     </section>
 
@@ -154,7 +177,19 @@
     el.querySelectorAll('.reveal').forEach(r => r.classList.add('in'));
   });
 
+  /* ricarica / ritorno indietro: niente stati bloccati */
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; // gestiamo noi la posizione (contenuto creato via JS)
+  const showInView = () => $$('.reveal:not(.in)').forEach(r => { if (r.getBoundingClientRect().top < innerHeight) r.classList.add('in'); });
+  const goHash = () => {
+    const el = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (el) { el.querySelectorAll('.reveal').forEach(r => r.classList.add('in')); el.scrollIntoView({ block: 'start' }); }
+    else if (!location.hash) scrollTo(0, 0);
+    showInView(); updateCurrent();
+  };
   render(lang);
-  // arrivo diretto con #sezione nell'URL
-  if (location.hash) { const el = document.getElementById(location.hash.slice(1)); if (el) { el.querySelectorAll('.reveal').forEach(r => r.classList.add('in')); requestAnimationFrame(() => el.scrollIntoView()); } }
+  goHash();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(goHash); // i font possono spostare il layout
+  addEventListener('load', showInView);
+  setTimeout(showInView, 1200); // rete di sicurezza se l'observer non scatta
+  addEventListener('pageshow', e => { if (e.persisted) { observe(); showInView(); updateCurrent(); } });
 })();

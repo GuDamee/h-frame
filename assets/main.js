@@ -65,6 +65,8 @@
     if (save) { try { localStorage.setItem(KEY, lang); } catch (e) {} }
     requestAnimationFrame(() => measure && measure());
   }
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  if (!location.hash) scrollTo(0, 0);
   const initial = root.dataset.lang || ((navigator.language || 'it').toLowerCase().startsWith('it') ? 'it' : 'en');
   let measure = null;
 
@@ -74,6 +76,7 @@
   }), { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
   $$('.reveal').forEach(el => io.observe(el));
   $$('.btn').forEach((el, i) => { el.style.transitionDelay = (i * 0.07) + 's'; io.observe(el); });
+  setTimeout(() => $$('.reveal,.btn').forEach(el => { if (el.getBoundingClientRect().top < innerHeight) el.classList.add('in'); }), 1500);
 
   /* ---------- tap ripple + tilt ---------- */
   $$('.btn').forEach(b => {
@@ -354,7 +357,7 @@
   }
 
   /* ---------- loop rAF ---------- */
-  let p = 0, mx = 0, running = true;
+  let p = 0, mx = 0, rafId = 0;
   function frame(time) {
     vel += ((sy - lastY) - vel) * 0.2; lastY = sy;
     const target = Math.min(1, Math.max(0, sy / Math.max(1, vh * 0.6))); // il banner sparisce in ~60% di schermo
@@ -377,14 +380,17 @@
     draw(time, p);
     drawBanner(time, p);
     updateEras();
-    if (running) requestAnimationFrame(frame);
+    rafId = requestAnimationFrame(frame); // un solo loop: il browser lo rallenta da solo quando la scheda è nascosta
   }
   resize(); addEventListener('resize', resize, { passive: true });
-  document.addEventListener('visibilitychange', () => {
-    const was = running; running = !document.hidden;
-    if (running && !was) requestAnimationFrame(frame);
+  function startLoop() { cancelAnimationFrame(rafId); rafId = requestAnimationFrame(frame); }
+  // ritorno con "indietro" (bfcache) o ricarica: ricalcola tutto e riparte da uno stato pulito
+  addEventListener('pageshow', e => {
+    sy = scrollY; lastY = sy; measure(); bResize(); t0 = -1;
+    $$('.reveal,.btn').forEach(el => { const r = el.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) el.classList.add('in'); });
+    if (e.persisted) startLoop();
   });
-  requestAnimationFrame(frame);
+  startLoop();
 
   /* ---------- intro: badge "Scegli la tua lingua" ---------- */
   const intro = $('#intro');

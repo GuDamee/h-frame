@@ -17,7 +17,7 @@ window.HFRAME_INFO = {
     heroSub: "Dalla curiosità all'autonomia: il club di H-FARM College per imparare a usare la tecnologia, e a difenderla, davvero.",
     s: {
       cose: "Cos'è H-FRAME",
-      branche: "Due branche",
+      branche: "Due branche: AI e Cybersecurity",
       funziona: "Come funziona",
       partecipa: "Partecipa",
       entra: "Come si entra",
@@ -26,30 +26,33 @@ window.HFRAME_INFO = {
     },
     about: [
       "Ogni giorno apri un chatbot, scrivi una richiesta e in pochi secondi hai una risposta. Ma sai cosa succede dietro lo schermo? Sai perché un modello gratuito non è uguale a uno a pagamento, o cos'è di preciso un agente AI? E quando clicchi un link, scarichi un file o condividi un dato, sai cosa stai rischiando e come proteggerti?",
-      "Sono due facce della stessa medaglia: più l'AI entra nel nostro modo di studiare e lavorare, più serve saperla usare bene e saper difendere ciò che le affidiamo. H-FRAME tiene insieme le due cose. È aperto a tutti gli studenti, di qualsiasi corso, e alcuni eventi sono aperti anche al pubblico esterno. Non serve saper programmare: basta la curiosità."
+      "Sono due facce della stessa medaglia: più l'AI entra nel nostro modo di studiare e lavorare, più serve saperla usare bene e saper difendere ciò che le affidiamo. H-FRAME tiene insieme le due cose. È aperto a tutti gli studenti dell'università di H-FARM College, di qualsiasi corso. Non serve saper programmare: basta la curiosità."
     ],
-    branchesTitle: "Due branche, un unico club",
+    levelQ: "Conosci già l'argomento?", levelBasic: "Sono alle prime armi", levelPro: "Ne so già qualcosa",
+    branchesTitle: "Due branche: AI e Cybersecurity",
     branches: [
       { icon: "🤖", name: "H-FRAME AI", cls: "ai",
-        text: "Capirai come funzionano i modelli linguistici (LLM), cioè i \"cervelli\" dietro chatbot come ChatGPT, Claude o Gemini, e gli agenti AI, programmi che non si limitano a rispondere ma compiono azioni al posto tuo, come scrivere un'email o organizzare un file. Saprai scegliere tra modelli a pagamento, open source (con il codice aperto a tutti) e open weight (scaricabili e usabili anche sul tuo computer), in base a ciò che ti serve. Imparerai ad automatizzare i compiti che ti rubano tempo, come report, email e ricerche, e a usare l'AI in modo responsabile, capendo quando fidarti e quando no. Si parte da zero e si arriva a costruire il tuo primo agente." },
+        basic: "Un'AI come ChatGPT, Claude o Gemini è un programma che ha letto moltissimi testi e ha imparato a rispondere come farebbe una persona. Non è magia e non sa tutto: a volte sbaglia, e ti mostreremo come accorgertene. Imparerai a usarla bene per studiare e lavorare: riassumere appunti, preparare una presentazione, scrivere un'email. Scoprirai come risparmiare tempo lasciandole i compiti noiosi, e cos'è un agente: un'AI che non solo risponde, ma fa le cose al posto tuo.",
+        text: "Partiamo da come funzionano gli LLM: modelli che prevedono il testo un token (un pezzo di parola) alla volta, dentro una finestra di contesto limitata. Vedremo prompt e context engineering, cioè come scrivere istruzioni e scegliere le informazioni giuste da dare al modello, e la RAG, che gli fa consultare i tuoi documenti prima di rispondere. Poi agenti e tool use: modelli che usano strumenti per agire, collegati ad app e dati tramite MCP, lo standard aperto per farlo. Confronteremo modelli chiusi, open weight (pesi scaricabili) e open source (anche codice e dati aperti), e quando conviene un modello locale sul tuo computer. Obiettivo: costruire il tuo primo agente." },
       { icon: "🔐", name: "H-FRAME Cyber", cls: "cyber",
-        text: "Imparerai a riconoscere gli attacchi più comuni e a difenderti. Tra questi ci sono il phishing, cioè email e messaggi falsi che cercano di rubarti password o dati, i link e file malevoli e le password deboli. Capirai come funziona un programma, come se ne trovano le vulnerabilità (i punti deboli che un attaccante potrebbe sfruttare) e quali strumenti di base usano i professionisti. Tutto si svolge su sistemi e ambienti di prova che abbiamo il permesso di testare: puoi sperimentare e sbagliare senza rischi." },
+        basic: "La cybersecurity è l'insieme dei modi per proteggere dati, account e dispositivi. Ti riguarda ogni giorno: un'email che sembra della tua banca, un messaggio che ti chiede un codice, una password usata ovunque. Imparerai a riconoscere le truffe online, a creare password sicure, ad attivare la verifica in due passaggi e a capire quali link e file evitare. Tutto con esempi pratici e senza rischi: non serve nessuna conoscenza tecnica.",
+        text: "Studieremo phishing e social engineering, cioè gli attacchi che sfruttano la fiducia delle persone più che i difetti del software. Vedremo le basi delle reti (indirizzi IP, porte, protocolli) e come leggerne il traffico, e le vulnerabilità più comuni delle applicazioni web secondo la OWASP Top 10, come injection e controlli d'accesso sbagliati. Faremo OSINT, la raccolta di informazioni da fonti pubbliche, e sfide CTF (Capture The Flag), esercizi a punti per trovare falle. Useremo gli strumenti base dei professionisti e vedremo come l'AI aiuta a difendere i sistemi. Sempre e solo in laboratori e ambienti di prova autorizzati." },
       { icon: "🤝", name: "Dove si incontrano", cls: "both",
         text: "Molti eventi uniranno le due branche: vedremo come l'AI può rendere i sistemi più sicuri, e come proteggere i tuoi dati quando lavori con l'AI. Altri eventi saranno dedicati a una sola delle due." }
     ],
     howTitle: "Come funziona",
-    howIntro: "Ogni mese c'è un tema diverso, con almeno due incontri, sempre tra teoria e pratica.",
+    howIntro: "Ogni mese c'è un tema diverso, con un evento a settimana, salvo imprevisti: si alternano una settimana con un professionista e una settimana di workshop pratico.",
     steps: [
-      ["Il talk:", "un professionista o un'azienda che lavora ogni giorno con l'AI o la sicurezza ci porta dentro casi reali."],
-      ["L'approfondimento:", "riprendiamo insieme quello che abbiamo ascoltato, partendo dalle basi per chi inizia da zero."],
-      ["Il workshop:", "mettiamo le mani su tutto ciò che abbiamo imparato, con esercizi e casi pratici."]
+      ["La settimana del talk:", "un professionista o un'azienda che lavora ogni giorno con l'AI o la sicurezza ci porta dentro casi reali."],
+      ["La settimana del workshop:", "riprendiamo quello che abbiamo ascoltato partendo dalle basi, e mettiamo le mani su tutto ciò che abbiamo imparato con esercizi e casi pratici."]
     ],
     monthTitle: "Un esempio di mese.",
     month: [
       ["Tema:", "\"Fai lavorare l'AI per te\"."],
-      ["Prima settimana:", "un professionista racconta come usa gli agenti AI nel suo lavoro."],
-      ["Settimane successive:", "capiamo insieme cos'è un agente e come si collega a email e documenti."],
-      ["A fine mese:", "ognuno costruisce un piccolo agente che riassume le email o organizza gli appunti."]
+      ["Settimana 1 · talk:", "un professionista racconta come usa gli agenti AI nel suo lavoro."],
+      ["Settimana 2 · workshop:", "capiamo insieme cos'è un agente e come si collega a email e documenti."],
+      ["Settimana 3 · talk:", "un altro ospite mostra agenti al lavoro su casi reali, e come usarli in sicurezza."],
+      ["Settimana 4 · workshop:", "ognuno costruisce un piccolo agente che riassume le email o organizza gli appunti."]
     ],
     howOutro: "Il percorso è progressivo, dalle basi ai temi avanzati, e da ogni incontro esci con qualcosa di concreto.",
     joinTitle: "Partecipa come vuoi tu",
@@ -68,8 +71,10 @@ window.HFRAME_INFO = {
     ],
     faqTitle: "Domande frequenti",
     faq: [
+      ["A chi è rivolto?", "Agli studenti dell'università di H-FARM College, di qualsiasi corso."],
+      ["Ogni quanto ci vediamo?", "Un evento a settimana, salvo imprevisti: si alternano una settimana con un professionista e una settimana di workshop pratico."],
+      ["Dove e a che ora?", "[In campus a H-FARM, di solito il ... alle ...]. Date e luoghi precisi arrivano nel gruppo WhatsApp."],
       ["Costa qualcosa?", "[Gratis per gli studenti di H-FARM College.]"],
-      ["Dove e quando ci vediamo?", "[In campus a H-FARM, di solito il ... alle ...]. Date e luoghi precisi arrivano nel gruppo WhatsApp."],
       ["Devo portare il computer?", "[Per i talk no; per i workshop sì, porta il tuo portatile.]"],
       ["Non so niente di AI o informatica, va bene?", "Sì, è proprio per te: ogni tema parte dalle basi."],
       ["Devo partecipare a tutti gli incontri?", "No, vieni a quelli che ti interessano."],
@@ -95,7 +100,7 @@ window.HFRAME_INFO = {
     heroSub: "From curiosity to independence: the H-FARM College club where you learn to really use technology, and to defend it.",
     s: {
       cose: "What is H-FRAME",
-      branche: "Two branches",
+      branche: "Two branches: AI and Cybersecurity",
       funziona: "How it works",
       partecipa: "Get involved",
       entra: "How to join",
@@ -104,30 +109,33 @@ window.HFRAME_INFO = {
     },
     about: [
       "Every day you open a chatbot, type a request and get an answer in seconds. But do you know what happens behind the screen? Do you know why a free model isn't the same as a paid one, or what exactly an AI agent is? And when you click a link, download a file or share some data, do you know what you're risking and how to protect yourself?",
-      "They're two sides of the same coin: the more AI becomes part of how we study and work, the more we need to know how to use it well and how to protect what we entrust to it. H-FRAME brings the two together. It's open to all students, from any programme, and some events are open to the public too. You don't need to know how to code: curiosity is enough."
+      "They're two sides of the same coin: the more AI becomes part of how we study and work, the more we need to know how to use it well and how to protect what we entrust to it. H-FRAME brings the two together. It's open to all H-FARM College university students, from any programme. You don't need to know how to code: curiosity is enough."
     ],
-    branchesTitle: "Two branches, one club",
+    levelQ: "Already know the topic?", levelBasic: "I'm a beginner", levelPro: "I know a bit already",
+    branchesTitle: "Two branches: AI and Cybersecurity",
     branches: [
       { icon: "🤖", name: "H-FRAME AI", cls: "ai",
-        text: "You'll understand how language models (LLMs) work, the \"brains\" behind chatbots like ChatGPT, Claude or Gemini, and AI agents, programs that don't just answer but take actions for you, like writing an email or organising a file. You'll know how to choose between paid models, open source models (with code open to everyone) and open weight models (which you can download and run on your own computer), depending on what you need. You'll learn to automate the tasks that eat up your time, like reports, emails and research, and to use AI responsibly, knowing when to trust it and when not to. We start from zero and work up to building your first agent." },
+        basic: "An AI like ChatGPT, Claude or Gemini is a program that has read a huge amount of text and learned to answer the way a person would. It isn't magic and it doesn't know everything: sometimes it gets things wrong, and we'll show you how to spot it. You'll learn to use it well for studying and work: summarising notes, preparing a presentation, writing an email. You'll find out how to save time by handing it the boring tasks, and what an agent is: an AI that doesn't just answer, but does things for you.",
+        text: "We start with how LLMs work: models that predict text one token (a piece of a word) at a time, within a limited context window. We'll cover prompt and context engineering, how to write instructions and pick the right information to give the model, and RAG, which lets it look things up in your documents before answering. Then agents and tool use: models that use tools to take action, connected to apps and data through MCP, an open standard. We'll compare closed, open weight (downloadable weights) and open source (code and data open too) models, and when a local model on your computer makes sense. Goal: build your first agent." },
       { icon: "🔐", name: "H-FRAME Cyber", cls: "cyber",
-        text: "You'll learn to recognise the most common attacks and to defend yourself. They include phishing, fake emails and messages that try to steal your passwords or data, malicious links and files, and weak passwords. You'll understand how a program works, how its vulnerabilities are found (the weak spots an attacker could exploit) and which basic tools professionals use. Everything happens on test systems and environments we have permission to test: you can experiment and make mistakes without any risk." },
+        basic: "Cybersecurity is all the ways we protect data, accounts and devices. It affects you every day: an email that looks like it's from your bank, a message asking for a code, one password used everywhere. You'll learn to spot online scams, create strong passwords, turn on two-step verification and tell which links and files to avoid. All with practical examples and no risk: no technical knowledge needed.",
+        text: "We'll study phishing and social engineering, attacks that exploit people's trust rather than software flaws. We'll cover network basics (IP addresses, ports, protocols) and how to read network traffic, plus the most common web app vulnerabilities from the OWASP Top 10, such as injection and broken access control. We'll practise OSINT, gathering information from public sources, and CTF (Capture The Flag) challenges, point-scoring exercises where you hunt for flaws. We'll use the basic tools professionals use and see how AI helps defend systems. Always and only in authorized labs and test environments." },
       { icon: "🤝", name: "Where they meet", cls: "both",
         text: "Many events will bring the two branches together: we'll see how AI can make systems more secure, and how to protect your data when you work with AI. Other events will focus on just one of the two." }
     ],
     howTitle: "How it works",
-    howIntro: "Every month has a different theme, with at least two sessions, always mixing theory and practice.",
+    howIntro: "Every month has a different theme, with one event a week, barring the unexpected: a week with a professional alternates with a hands-on workshop week.",
     steps: [
-      ["The talk:", "a professional or a company that works with AI or security every day takes us inside real cases."],
-      ["The deep dive:", "we go back over what we heard together, starting from the basics for anyone starting from zero."],
-      ["The workshop:", "we get hands-on with everything we've learned, through exercises and practical cases."]
+      ["Talk week:", "a professional or a company that works with AI or security every day takes us inside real cases."],
+      ["Workshop week:", "we go back over what we heard, starting from the basics, and get hands-on with everything we've learned through exercises and practical cases."]
     ],
     monthTitle: "An example month.",
     month: [
       ["Theme:", "\"Make AI work for you\"."],
-      ["First week:", "a professional explains how they use AI agents in their work."],
-      ["Following weeks:", "together we work out what an agent is and how it connects to email and documents."],
-      ["End of the month:", "everyone builds a small agent that summarises emails or organises notes."]
+      ["Week 1 · talk:", "a professional explains how they use AI agents in their work."],
+      ["Week 2 · workshop:", "together we work out what an agent is and how it connects to email and documents."],
+      ["Week 3 · talk:", "another guest shows agents at work on real cases, and how to use them safely."],
+      ["Week 4 · workshop:", "everyone builds a small agent that summarises emails or organises notes."]
     ],
     howOutro: "The path is progressive, from the basics to advanced topics, and you leave every session with something concrete.",
     joinTitle: "Get involved your way",
@@ -146,8 +154,10 @@ window.HFRAME_INFO = {
     ],
     faqTitle: "Frequently asked questions",
     faq: [
+      ["Who is it for?", "H-FARM College university students, from any programme."],
+      ["How often do we meet?", "One event a week, barring the unexpected: a week with a professional alternates with a hands-on workshop week."],
+      ["Where and at what time?", "[On the H-FARM campus, usually on ... at ...]. Exact dates and places are shared in the WhatsApp group."],
       ["Does it cost anything?", "[Free for H-FARM College students.]"],
-      ["Where and when do we meet?", "[On the H-FARM campus, usually on ... at ...]. Exact dates and places are shared in the WhatsApp group."],
       ["Do I need to bring a computer?", "[Not for the talks; for the workshops, yes, bring your laptop.]"],
       ["I don't know anything about AI or computers. Is that OK?", "Yes, it's made for you: every topic starts from the basics."],
       ["Do I have to come to every session?", "No, come to the ones that interest you."],
