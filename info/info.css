@@ -186,6 +186,7 @@ strong{font-weight:700}
 .contacts li{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 16px;border:2px solid #000;border-radius:14px;background:rgba(255,255,255,.55)}
 .contacts .k{font-family:var(--pixel);font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;min-width:120px}
 .contacts a{font-weight:700;color:var(--green-d);text-decoration-thickness:2px;text-underline-offset:3px;word-break:break-word;overflow-wrap:anywhere;min-width:0}
+.contacts .soon{font-weight:700;opacity:.75}
 .contacts li.mail{background:#fff;border-color:var(--green-d);box-shadow:3px 3px 0 var(--green-d)}
 .contacts li.mail a::before{content:'✉ ';text-decoration:none;display:inline-block;margin-right:2px}
 @media (max-width:520px){.contacts li.mail{flex-direction:column;align-items:flex-start;gap:4px}}

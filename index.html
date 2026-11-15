@@ -17,9 +17,9 @@
 <link rel="preload" href="assets/fonts/JunicodeVF-Roman-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/Silkscreen-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/DejaVuSerif-Bold-sub.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/style.css?v=20261115e">
-<script src="config.js?v=20261115e"></script>
-<script src="i18n.js?v=20261115e"></script>
+<link rel="stylesheet" href="assets/style.css?v=20261115g">
+<script src="config.js?v=20261115g"></script>
+<script src="i18n.js?v=20261115g"></script>
 <script>/* evita il flash: sceglie subito se mostrare il badge lingua */
 (function(){var l=null;try{l=localStorage.getItem("hframe-lang")}catch(e){}
 var q=new URLSearchParams(location.search).get("lang");if(q==="it"||q==="en")l=q;
@@ -116,22 +116,20 @@ var d=document.documentElement;if(l==="it"||l==="en"){d.lang=l;d.dataset.lang=l}
         <span class="txt"><strong data-i18n="waT">Entra nel gruppo WhatsApp</strong><small data-i18n="waS">Novità, eventi e workshop</small></span>
         <span class="arr">→</span>
       </a>
-      <a class="btn b-ig" data-link="instagram" href="#instagram" target="_blank" rel="noopener">
-        <span class="ico"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" class="dot"/></svg></span>
-        <span class="txt"><strong data-i18n="igT">Seguici su Instagram</strong><small data-i18n="igS">Contenuti su AI e cyber</small></span>
-        <span class="arr">→</span>
-      </a>
-      <a class="btn b-tt" data-link="tiktok" href="#tiktok" target="_blank" rel="noopener">
-        <span class="ico"><svg viewBox="0 0 24 24" class="fill tt-logo"><path class="c" d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48Z" transform="translate(-1 -1)"/><path class="m" d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48Z" transform="translate(1 1)"/><path class="w" d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48Z"/></svg></span>
-        <span class="txt"><strong data-i18n="ttT">Seguici su TikTok</strong><small data-i18n="ttS">Video brevi su AI e cyber</small></span>
-        <span class="arr">→</span>
-      </a>
       <a class="btn b-pr" data-link="presentazione" href="info/">
         <span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6"/><circle cx="12" cy="7.6" r=".6" class="dot"/></svg></span>
         <span class="txt"><strong data-i18n="prT">Scopri di più</strong><small data-i18n="prS">Tutto su H-FRAME</small></span>
         <span class="arr">→</span>
       </a>
     </nav>
+    <ul class="mails reveal" data-i18n-attr="aria-label:mailsLabel" aria-label="Contatti email">
+      <li><span data-i18n="mailAI">Branca AI</span><span class="sep">:</span> <a href="mailto:guglielmo.damele@student.h-farm.com">guglielmo.<wbr>damele<wbr>@student.<wbr>h-farm.<wbr>com</a></li>
+      <li><span data-i18n="mailCY">Branca Cybersecurity</span><span class="sep">:</span> <a href="mailto:giovanni.fraternale@student.h-farm.com">giovanni.<wbr>fraternale<wbr>@student.<wbr>h-farm.<wbr>com</a></li>
+    </ul>
+    <div class="socials reveal">
+      <span class="pill p-ig" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor"/></svg>Instagram · <span data-i18n="soon">A breve 👀</span></span>
+      <span class="pill p-tt" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" stroke="none"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48Z"/></svg>TikTok · <span data-i18n="soon">A breve 👀</span></span>
+    </div>
   </section>
 </main>
 
@@ -141,6 +139,6 @@ var d=document.documentElement;if(l==="it"||l==="en"){d.lang=l;d.dataset.lang=l}
   <p class="tiny">© <span id="y"></span> H-FRAME</p>
 </footer>
 
-<script src="assets/main.js?v=20261115e"></script>
+<script src="assets/main.js?v=20261115g"></script>
 </body>
 </html>

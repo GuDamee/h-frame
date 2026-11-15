@@ -46,7 +46,7 @@
     const t = T[lang];
     const n = id => IDS.indexOf(id);
     const contact = (label, url, shown) => `<li><span class="k">${label}</span>${isReal(url)
-      ? `<a href="${url}" target="_blank" rel="noopener">${shown}</a>` : ph(t.contacts.missing)}</li>`;
+      ? `<a href="${url}" target="_blank" rel="noopener">${shown}</a>` : `<span class="soon">${t.contacts.missing}</span>`}</li>`;
     const handle = u => u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
     const html = `
     <section class="hero" aria-labelledby="h1">

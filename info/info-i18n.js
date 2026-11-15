@@ -81,7 +81,7 @@ window.HFRAME_INFO = {
       ["In che lingua si svolgono?", "[Italiano / inglese.]"]
     ],
     contactsTitle: "Contatti",
-    contacts: { instagram: "Instagram", tiktok: "TikTok", whatsapp: "WhatsApp (gruppo)", emails: [["Branca AI", "guglielmo.damele@student.h-farm.com"], ["Branca Cybersecurity", "giovanni.fraternale@student.h-farm.com"]], missing: "[da aggiungere]" },
+    contacts: { instagram: "Instagram", tiktok: "TikTok", whatsapp: "WhatsApp (gruppo)", emails: [["Branca AI", "guglielmo.damele@student.h-farm.com"], ["Branca Cybersecurity", "giovanni.fraternale@student.h-farm.com"]], missing: "A breve 👀" },
     closing1: "L'AI e la cybersecurity stanno cambiando ogni lavoro. Puoi subirle, oppure imparare a usarle e a difenderti.",
     closing2: "Ogni epoca ha la sua innovazione. Stai al passo.",
     footer: "Club studentesco di AI &amp; Cybersecurity · H-FARM College",
@@ -164,7 +164,7 @@ window.HFRAME_INFO = {
       ["What language are they in?", "[Italian / English.]"]
     ],
     contactsTitle: "Contacts",
-    contacts: { instagram: "Instagram", tiktok: "TikTok", whatsapp: "WhatsApp (group)", emails: [["AI branch", "guglielmo.damele@student.h-farm.com"], ["Cybersecurity branch", "giovanni.fraternale@student.h-farm.com"]], missing: "[to be added]" },
+    contacts: { instagram: "Instagram", tiktok: "TikTok", whatsapp: "WhatsApp (group)", emails: [["AI branch", "guglielmo.damele@student.h-farm.com"], ["Cybersecurity branch", "giovanni.fraternale@student.h-farm.com"]], missing: "Coming soon 👀" },
     closing1: "AI and cybersecurity are changing every job. You can let them happen to you, or learn to use them and to defend yourself.",
     closing2: "Every era has its innovation. Keep up.",
     footer: "AI &amp; Cybersecurity Student Club · H-FARM College",

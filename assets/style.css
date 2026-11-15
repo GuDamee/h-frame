@@ -209,6 +209,19 @@ main,footer{position:relative;z-index:3}
 .btns .ripple{background:rgba(255,255,255,.45)}
 .btn.b-wa,.btn.b-pr,.btn.b-form,.btn.b-ig{border-width:2px}
 @media (min-width:900px){.btn.b-pr{grid-column:1 / -1}}
+/* email di contatto sotto i pulsanti */
+.mails{list-style:none;margin:28px auto 0;padding:0;text-align:center;font-size:14px;line-height:1.5;color:rgba(0,0,0,.72);display:grid;gap:6px;max-width:100%}
+.mails li{overflow-wrap:anywhere}
+@media (max-width:520px){.mails{gap:10px}.mails li>span{display:block;margin-bottom:1px}.mails li>.sep{display:none}}
+.mails span{font-family:var(--pixel);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#000}
+.mails a{color:var(--green-d);font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.mails a:hover,.mails a:focus-visible{color:var(--green)}
+/* Instagram / TikTok: in arrivo, non cliccabili */
+.socials{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:16px}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:6px 12px 6px 9px;border-radius:999px;font-size:12.5px;font-weight:700;line-height:1.2;color:#fff;cursor:default;user-select:none;white-space:nowrap}
+.pill svg{width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-width:2}
+.pill.p-ig{background:linear-gradient(120deg,#F58529,#DD2A7B 50%,#8134AF);border:1.5px solid #5E1F80;text-shadow:0 1px 2px rgba(0,0,0,.3)}
+.pill.p-tt{background:#000;border:1.5px solid #000;box-shadow:-2px -2px 0 #25F4EE,2px 2px 0 #FE2C55}
 
 /* ---------- footer ---------- */
 .foot{text-align:center;padding:48px 24px calc(40px + env(safe-area-inset-bottom));border-top:2px solid #000;
