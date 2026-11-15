@@ -25,7 +25,7 @@ window.HFRAME_I18N = {
     waT: "Entra nel gruppo WhatsApp", waS: "Novità, eventi e workshop",
     igT: "Seguici su Instagram", igS: "Contenuti su AI e cyber",
     ttT: "Seguici su TikTok", ttS: "Video brevi su AI e cyber",
-    prT: "Presentazione del club", prS: "Disponibile in <b class=\"lang\">IT</b> / <b class=\"lang\">EN</b>",
+    prT: "Scopri di più", prS: "Tutto su H-FRAME",
     footer: "Club studentesco di AI &amp; Cybersecurity · H-FARM College",
     toggleLabel: "Lingua"
   },
@@ -49,7 +49,7 @@ window.HFRAME_I18N = {
     waT: "Join the WhatsApp group", waS: "News, events and workshops",
     igT: "Follow us on Instagram", igS: "AI and cyber content",
     ttT: "Follow us on TikTok", ttS: "Short videos on AI and cyber",
-    prT: "Club presentation", prS: "Available in <b class=\"lang\">IT</b> / <b class=\"lang\">EN</b>",
+    prT: "Learn more", prS: "All about H-FRAME",
     footer: "AI &amp; Cybersecurity Student Club · H-FARM College",
     toggleLabel: "Language"
   }

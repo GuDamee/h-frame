@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Info · H-FRAME · AI &amp; Cybersecurity Club</title>
+<meta name="description" content="Tutto su H-FRAME, il club di H-FARM College per AI e cybersecurity: cos'è, come funziona, come partecipare e come entrare.">
+<meta name="theme-color" content="#C2DCB9">
+<meta property="og:title" content="Info · H-FRAME · AI & Cybersecurity Club">
+<meta property="og:description" content="Tutto su H-FRAME: cos'è, come funziona, come partecipare e come entrare.">
+<meta property="og:image" content="https://gudamee.github.io/h-frame/assets/og-v4.png">
+<meta property="og:url" content="https://gudamee.github.io/h-frame/info/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon-v4.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon-v4.png">
+<link rel="preload" href="../assets/fonts/JunicodeVF-Roman-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/DejaVuSerif-Bold-sub.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/Silkscreen-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="info.css">
+<script src="../config.js"></script>
+<script src="info-i18n.js"></script>
+<script>/* lingua: stessa scelta della home (localStorage "hframe-lang"), oppure ?lang=it|en */
+(function(){var l=null;try{l=localStorage.getItem("hframe-lang")}catch(e){}
+var q=new URLSearchParams(location.search).get("lang");if(q==="it"||q==="en")l=q;
+if(l!=="it"&&l!=="en")l=(navigator.language||"it").toLowerCase().indexOf("it")===0?"it":"en";
+var d=document.documentElement;d.lang=l;d.dataset.lang=l})();</script>
+</head>
+<body>
+<div class="bgfx" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<header class="top">
+  <a class="home" href="../" data-i18n-attr="aria-label:home" aria-label="Torna alla home">
+    <img src="../assets/hframe-logo-v4.png" alt="H-FRAME" width="2048" height="316">
+  </a>
+  <div class="lang-toggle" role="group" data-i18n-attr="aria-label:toggleLabel" aria-label="Lingua">
+    <button type="button" data-set="it" aria-label="Italiano">IT</button>
+    <button type="button" data-set="en" aria-label="English">EN</button>
+  </div>
+</header>
+
+<main id="content"><!-- contenuto generato da info.js con i testi di info-i18n.js --></main>
+
+<footer class="foot">
+  <a class="foot-home" href="../"><img src="../assets/hframe-logo-v4.png" alt="H-FRAME" width="2048" height="316" loading="lazy"></a>
+  <p data-i18n="footer">Club studentesco di AI &amp; Cybersecurity · H-FARM College</p>
+  <p><a class="back" href="../" data-i18n="backHome">← Torna alla home</a></p>
+</footer>
+
+<!-- pulsante "Indice" sempre raggiungibile -->
+<button type="button" class="toc-fab" aria-expanded="false" aria-controls="tocSheet">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+  <span class="lbl" data-i18n="tocBtn">Indice</span><span class="cur"></span>
+</button>
+<div class="toc-sheet" id="tocSheet" hidden>
+  <div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet-head"><p id="sheetTitle" data-i18n="tocTitle">Indice</p><button type="button" class="sheet-x" data-i18n-attr="aria-label:close" aria-label="Chiudi">✕</button></div>
+    <ol class="sheet-list"></ol>
+  </div>
+</div>
+
+<script src="info.js"></script>
+</body>
+</html>

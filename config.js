@@ -8,5 +8,5 @@ window.HFRAME_LINKS = {
   whatsapp:     "https://chat.whatsapp.com/DtAPyp8FJSE2KRaGKmD7Iv",      // Link d'invito al gruppo WhatsApp (https://chat.whatsapp.com/...)
   instagram:    "#instagram",     // Profilo Instagram (https://instagram.com/...)
   tiktok:       "#tiktok",        // Profilo TikTok (https://www.tiktok.com/@...)
-  presentazione:"#presentazione"  // Presentazione del club IT/EN (PDF, Google Slides, Canva...)
+  presentazione:"info/"          // Pagina "Scopri di più" (info/index.html)
 };

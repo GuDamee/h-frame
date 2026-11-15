@@ -11,7 +11,7 @@
   $$('[data-link]').forEach(a => {
     const href = L[a.dataset.link];
     if (href) a.href = href;
-    if (!href || href.startsWith('#')) a.removeAttribute('target'); // segnaposto: niente nuova scheda
+    if (!href || !/^https?:/.test(href)) a.removeAttribute('target'); // segnaposto o pagina del sito: stessa scheda
   });
   $('#y').textContent = new Date().getFullYear();
 
