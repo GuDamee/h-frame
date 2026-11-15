@@ -107,7 +107,7 @@
         ${contact(t.contacts.instagram, L.instagram, isReal(L.instagram) ? handle(L.instagram) : '')}
         ${contact(t.contacts.tiktok, L.tiktok, isReal(L.tiktok) ? handle(L.tiktok) : '')}
         ${contact(t.contacts.whatsapp, L.whatsapp, lang === 'it' ? 'Entra nel gruppo →' : 'Join the group →')}
-        <li><span class="k">${t.contacts.email}</span>${ph(t.contacts.emailValue)}</li>
+        ${t.contacts.emails.map(([k, m]) => `<li class="mail"><span class="k">${k}</span><a href="mailto:${m}">${m.replace('@', '<wbr>@').replace(/\./g, '.<wbr>')}</a></li>`).join('')}
       </ul>
       <div class="closing reveal"><p>${t.closing1}</p><p class="punch">${t.closing2}</p></div>
     </section>`;
