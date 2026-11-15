@@ -97,7 +97,7 @@
     <section id="faq">
       ${kicker(n('faq'), t.s.faq)}
       <h2 class="reveal">${t.faqTitle}</h2>
-      <div class="faq">${t.faq.map((f, i) => `<details class="reveal"${i === 0 ? '' : ''}><summary>${f[0]}</summary><div class="ans"><p>${ph(f[1])}</p></div></details>`).join('')}</div>
+      <div class="faq">${t.faq.map((f, i) => `<details class="reveal"${i === 0 ? '' : ''}><summary>${f[0]}</summary><div class="ans"><p>${ph(f[1]).replace('{wa}', isReal(L.whatsapp) ? `<a class="inl" href="${L.whatsapp}" target="_blank" rel="noopener">` : '<span>').replace('{/wa}', isReal(L.whatsapp) ? '</a>' : '</span>')}</p></div></details>`).join('')}</div>
     </section>
 
     <section id="contatti">

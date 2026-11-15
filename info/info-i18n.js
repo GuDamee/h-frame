@@ -26,7 +26,7 @@ window.HFRAME_INFO = {
     },
     about: [
       "Ogni giorno apri un chatbot, scrivi una richiesta e in pochi secondi hai una risposta. Ma sai cosa succede dietro lo schermo? Sai perché un modello gratuito non è uguale a uno a pagamento, o cos'è di preciso un agente AI? E quando clicchi un link, scarichi un file o condividi un dato, sai cosa stai rischiando e come proteggerti?",
-      "Sono due facce della stessa medaglia: più l'AI entra nel nostro modo di studiare e lavorare, più serve saperla usare bene e saper difendere ciò che le affidiamo. H-FRAME tiene insieme le due cose. È aperto a tutti gli studenti dell'università di H-FARM College, di qualsiasi corso. Non serve saper programmare: basta la curiosità."
+      "Sono due facce della stessa medaglia: più l'AI entra nel nostro modo di studiare e lavorare, più serve saperla usare bene e saper difendere ciò che le affidiamo. H-FRAME tiene insieme le due cose. È aperto a tutti gli studenti interessati e con voglia di imparare, di qualsiasi corso. Non serve saper programmare: basta la curiosità."
     ],
     levelQ: "Conosci già l'argomento?", levelBasic: "Sono alle prime armi", levelPro: "Ne so già qualcosa",
     branchesTitle: "Due branche: AI e Cybersecurity",
@@ -41,18 +41,19 @@ window.HFRAME_INFO = {
         text: "Molti eventi uniranno le due branche: vedremo come l'AI può rendere i sistemi più sicuri, e come proteggere i tuoi dati quando lavori con l'AI. Altri eventi saranno dedicati a una sola delle due." }
     ],
     howTitle: "Come funziona",
-    howIntro: "Ogni mese c'è un tema diverso, con un evento a settimana, salvo imprevisti: si alternano una settimana con un professionista e una settimana di workshop pratico.",
+    howIntro: "Ogni mese ha un tema diverso. C'è un evento a settimana, salvo imprevisti, e si alternano AI e Cybersecurity, sempre tra teoria e pratica.",
     steps: [
-      ["La settimana del talk:", "un professionista o un'azienda che lavora ogni giorno con l'AI o la sicurezza ci porta dentro casi reali."],
-      ["La settimana del workshop:", "riprendiamo quello che abbiamo ascoltato partendo dalle basi, e mettiamo le mani su tutto ciò che abbiamo imparato con esercizi e casi pratici."]
+      ["Una settimana AI, una Cyber:", "gli eventi si alternano tra le due branche, così ogni tema si guarda da entrambi i lati."],
+      ["I talk:", "durante il mese, professionisti che lavorano ogni giorno con l'AI o la sicurezza ci portano dentro casi reali."],
+      ["La settimana dei workshop:", "ci sono entrambi gli eventi, un workshop di AI e uno di Cybersecurity, per mettere le mani su ciò che abbiamo imparato con esercizi e casi pratici."]
     ],
     monthTitle: "Un esempio di mese.",
     month: [
-      ["Tema:", "\"Fai lavorare l'AI per te\"."],
-      ["Settimana 1 · talk:", "un professionista racconta come usa gli agenti AI nel suo lavoro."],
-      ["Settimana 2 · workshop:", "capiamo insieme cos'è un agente e come si collega a email e documenti."],
-      ["Settimana 3 · talk:", "un altro ospite mostra agenti al lavoro su casi reali, e come usarli in sicurezza."],
-      ["Settimana 4 · workshop:", "ognuno costruisce un piccolo agente che riassume le email o organizza gli appunti."]
+      ["Tema:", "\"Agenti AI: falli lavorare per te, in sicurezza\"."],
+      ["Settimana 1 · AI:", "un professionista racconta come usa gli agenti AI nel suo lavoro."],
+      ["Settimana 2 · Cyber:", "un esperto di sicurezza spiega quali rischi corrono i tuoi dati quando li affidi a un agente."],
+      ["Settimana 3 · AI:", "capiamo insieme cos'è un agente e come si collega a email e documenti, partendo dalle basi."],
+      ["Settimana dei workshop · AI + Cyber:", "nel workshop di AI ognuno costruisce un piccolo agente che riassume le email; in quello di Cyber lo mettiamo alla prova e scopriamo come renderlo sicuro."]
     ],
     howOutro: "Il percorso è progressivo, dalle basi ai temi avanzati, e da ogni incontro esci con qualcosa di concreto.",
     joinTitle: "Partecipa come vuoi tu",
@@ -71,11 +72,10 @@ window.HFRAME_INFO = {
     ],
     faqTitle: "Domande frequenti",
     faq: [
-      ["A chi è rivolto?", "Agli studenti dell'università di H-FARM College, di qualsiasi corso."],
-      ["Ogni quanto ci vediamo?", "Un evento a settimana, salvo imprevisti: si alternano una settimana con un professionista e una settimana di workshop pratico."],
-      ["Dove e a che ora?", "[In campus a H-FARM, di solito il ... alle ...]. Date e luoghi precisi arrivano nel gruppo WhatsApp."],
-      ["Costa qualcosa?", "[Gratis per gli studenti di H-FARM College.]"],
-      ["Devo portare il computer?", "[Per i talk no; per i workshop sì, porta il tuo portatile.]"],
+      ["A chi è rivolto?", "A tutti gli studenti interessati e volenterosi di imparare ad applicare ciò che scoprono e a responsabilizzarsi."],
+      ["Ogni quanto ci vediamo?", "Un evento a settimana, salvo imprevisti, alternando un evento di AI e uno di Cybersecurity. Ogni mese c'è un tema diverso. Nella settimana dei workshop ci saranno entrambi gli eventi."],
+      ["Dove e a che ora?", "Date e luoghi precisi arrivano nel {wa}gruppo WhatsApp{/wa}. Stiamo organizzando il Day 0: a breve aggiornamenti!"],
+      ["Devo portare il computer?", "Per i talk no, a meno che tu non voglia prendere appunti: le slide verranno condivise. Per i workshop sì, porta il tuo portatile."],
       ["Non so niente di AI o informatica, va bene?", "Sì, è proprio per te: ogni tema parte dalle basi."],
       ["Devo partecipare a tutti gli incontri?", "No, vieni a quelli che ti interessano."],
       ["In che lingua si svolgono?", "[Italiano / inglese.]"]
@@ -109,7 +109,7 @@ window.HFRAME_INFO = {
     },
     about: [
       "Every day you open a chatbot, type a request and get an answer in seconds. But do you know what happens behind the screen? Do you know why a free model isn't the same as a paid one, or what exactly an AI agent is? And when you click a link, download a file or share some data, do you know what you're risking and how to protect yourself?",
-      "They're two sides of the same coin: the more AI becomes part of how we study and work, the more we need to know how to use it well and how to protect what we entrust to it. H-FRAME brings the two together. It's open to all H-FARM College university students, from any programme. You don't need to know how to code: curiosity is enough."
+      "They're two sides of the same coin: the more AI becomes part of how we study and work, the more we need to know how to use it well and how to protect what we entrust to it. H-FRAME brings the two together. It's open to all students who are interested and keen to learn, from any programme. You don't need to know how to code: curiosity is enough."
     ],
     levelQ: "Already know the topic?", levelBasic: "I'm a beginner", levelPro: "I know a bit already",
     branchesTitle: "Two branches: AI and Cybersecurity",
@@ -124,18 +124,19 @@ window.HFRAME_INFO = {
         text: "Many events will bring the two branches together: we'll see how AI can make systems more secure, and how to protect your data when you work with AI. Other events will focus on just one of the two." }
     ],
     howTitle: "How it works",
-    howIntro: "Every month has a different theme, with one event a week, barring the unexpected: a week with a professional alternates with a hands-on workshop week.",
+    howIntro: "Every month has a different theme. There's one event a week, barring the unexpected, alternating between AI and Cybersecurity, always mixing theory and practice.",
     steps: [
-      ["Talk week:", "a professional or a company that works with AI or security every day takes us inside real cases."],
-      ["Workshop week:", "we go back over what we heard, starting from the basics, and get hands-on with everything we've learned through exercises and practical cases."]
+      ["One week AI, one week Cyber:", "events alternate between the two branches, so every theme is seen from both sides."],
+      ["The talks:", "during the month, professionals who work with AI or security every day take us inside real cases."],
+      ["Workshop week:", "both events happen, an AI workshop and a Cybersecurity one, to get hands-on with what we've learned through exercises and practical cases."]
     ],
     monthTitle: "An example month.",
     month: [
-      ["Theme:", "\"Make AI work for you\"."],
-      ["Week 1 · talk:", "a professional explains how they use AI agents in their work."],
-      ["Week 2 · workshop:", "together we work out what an agent is and how it connects to email and documents."],
-      ["Week 3 · talk:", "another guest shows agents at work on real cases, and how to use them safely."],
-      ["Week 4 · workshop:", "everyone builds a small agent that summarises emails or organises notes."]
+      ["Theme:", "\"AI agents: make them work for you, safely\"."],
+      ["Week 1 · AI:", "a professional explains how they use AI agents in their work."],
+      ["Week 2 · Cyber:", "a security expert explains what risks your data faces when you hand it to an agent."],
+      ["Week 3 · AI:", "together we work out what an agent is and how it connects to email and documents, starting from the basics."],
+      ["Workshop week · AI + Cyber:", "in the AI workshop everyone builds a small agent that summarises emails; in the Cyber one we put it to the test and find out how to make it secure."]
     ],
     howOutro: "The path is progressive, from the basics to advanced topics, and you leave every session with something concrete.",
     joinTitle: "Get involved your way",
@@ -154,11 +155,10 @@ window.HFRAME_INFO = {
     ],
     faqTitle: "Frequently asked questions",
     faq: [
-      ["Who is it for?", "H-FARM College university students, from any programme."],
-      ["How often do we meet?", "One event a week, barring the unexpected: a week with a professional alternates with a hands-on workshop week."],
-      ["Where and at what time?", "[On the H-FARM campus, usually on ... at ...]. Exact dates and places are shared in the WhatsApp group."],
-      ["Does it cost anything?", "[Free for H-FARM College students.]"],
-      ["Do I need to bring a computer?", "[Not for the talks; for the workshops, yes, bring your laptop.]"],
+      ["Who is it for?", "All students who are interested and keen to learn how to apply what they discover and to take responsibility."],
+      ["How often do we meet?", "One event a week, barring the unexpected, alternating between an AI event and a Cybersecurity event. Each month has a different theme. In workshop week, both events take place."],
+      ["Where and at what time?", "Exact dates and places are shared in the {wa}WhatsApp group{/wa}. We're organising Day 0: updates coming soon!"],
+      ["Do I need to bring a computer?", "Not for the talks, unless you want to take notes: the slides will be shared. For the workshops, yes, bring your laptop."],
       ["I don't know anything about AI or computers. Is that OK?", "Yes, it's made for you: every topic starts from the basics."],
       ["Do I have to come to every session?", "No, come to the ones that interest you."],
       ["What language are they in?", "[Italian / English.]"]
