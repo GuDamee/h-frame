@@ -114,7 +114,7 @@
   /* ---------- sfondo canvas: particelle d'oro + tracce di circuito ---------- */
   const cv = $('#bg'), ctx = cv.getContext('2d');
   let W = 0, H = 0, DPR = 1, parts = [], traces = [];
-  const GOLD = [24, 122, 48], GOLDL = [0, 58, 10], PERI = [0, 0, 0]; // su fondo chiaro: verde #187A30, verde scuro #003A0A, nero
+  const GOLD = [201, 162, 74], GOLDL = [232, 212, 154], PERI = [247, 240, 225]; // su fondo bordeaux: oro #C9A24A, oro chiaro #E8D49A, avorio
   const rnd = (a, b) => a + Math.random() * (b - a);
   function resize() {
     DPR = Math.min(devicePixelRatio || 1, 1.75);
@@ -203,7 +203,7 @@
      così la dissolvenza a pixel e il glitch guidati dallo scroll continuano a funzionare.
      L'animazione gira da sola: lo scroll non è mai bloccato. */
   const WORD = 'H-FRAME', WORD_VW = .74, WORD_MAX_W = 980;
-  const FONT = '"HFrame Serif"', INK = '#000', CIPHER_INK = '#187A30';
+  const FONT = '"HFrame Serif"', INK = '#C9A24A', CIPHER_INK = '#F7F0E1';
   const CIPHER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&<>/{}=+*?!@[]';
   // tempi del ciclo (ms): vuoto → scrittura → parola intera → cancellazione → vuoto
   const T_BLANK = 900, T_CHAR = 290, T_SCR = 190, T_HOLD = 5200, T_DEL = 95, T_GAP = 350;
@@ -304,7 +304,7 @@
         const sh = h * (.08 + Math.random() * .14), sy0 = y + Math.random() * (h - sh), dx = (Math.random() - .5) * w * .04;
         bctx.clearRect(x - 2, sy0, w + 4, sh);
         bctx.drawImage(tcv, 0, sy0 * bDPR, tcv.width, sh * bDPR, dx, sy0, bW, sh);
-        bctx.globalCompositeOperation = 'source-atop'; bctx.fillStyle = 'rgba(24,122,48,.75)'; bctx.fillRect(x + dx, sy0, w, sh); bctx.globalCompositeOperation = 'source-over';
+        bctx.globalCompositeOperation = 'source-atop'; bctx.fillStyle = 'rgba(138,42,62,.8)'; bctx.fillRect(x + dx, sy0, w, sh); bctx.globalCompositeOperation = 'source-over';
       }
     }
     if (!RM && dk > 0) {
@@ -314,7 +314,7 @@
         if (bx + bsize < x0 || bx > x1 || by + bsize < y0 || by > y1) continue;
         if (t < k - edge) bctx.clearRect(bx, by, bsize, bsize);
         else if (t < k && ((bx / bsize + by / bsize) % 2 === 0)) {
-          bctx.fillStyle = t < k - edge / 2 ? 'rgba(136,184,132,.75)' : 'rgba(24,122,48,.7)';
+          bctx.fillStyle = t < k - edge / 2 ? 'rgba(232,212,154,.75)' : 'rgba(201,162,74,.7)';
           bctx.fillRect(bx, by, bsize, bsize);
         }
       }

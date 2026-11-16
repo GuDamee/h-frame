@@ -26,7 +26,7 @@ window.HFRAME_I18N = {
     igT: "Seguici su Instagram", igS: "Contenuti su AI e cyber",
     ttT: "Seguici su TikTok", ttS: "Video brevi su AI e cyber",
     prT: "Scopri di più", prS: "Tutto su H-FRAME",
-    soon: "A breve 👀", mailAI: "Branca AI", mailCY: "Branca Cybersecurity", mailsLabel: "Contatti email",
+    soon: "A breve 👀", mailAI: "Branca AI", mailCY: "Branca Cybersecurity", mailSM: "Social media", mailsLabel: "Contatti email",
     footer: "Club studentesco di AI &amp; Cybersecurity · H-FARM College",
     toggleLabel: "Lingua"
   },
@@ -51,7 +51,7 @@ window.HFRAME_I18N = {
     igT: "Follow us on Instagram", igS: "AI and cyber content",
     ttT: "Follow us on TikTok", ttS: "Short videos on AI and cyber",
     prT: "Learn more", prS: "All about H-FRAME",
-    soon: "Coming soon 👀", mailAI: "AI branch", mailCY: "Cybersecurity branch", mailsLabel: "Email contacts",
+    soon: "Coming soon 👀", mailAI: "AI branch", mailCY: "Cybersecurity branch", mailSM: "Social media", mailsLabel: "Email contacts",
     footer: "AI &amp; Cybersecurity Student Club · H-FARM College",
     toggleLabel: "Language"
   }
