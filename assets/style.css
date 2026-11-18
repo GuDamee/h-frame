@@ -64,12 +64,18 @@ main,footer{position:relative;z-index:3}
 .hero-tag i{font-style:normal;color:var(--green)}
 .hero-sub{margin-top:8px;font-size:clamp(15px,4vw,18px);color:var(--muted);animation:fadeUp 1s .7s var(--ease) backwards}
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-.scroll-hint{display:flex;flex-direction:column;align-items:center;gap:10px;font-family:var(--pixel);font-size:12px;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--ivory);
-  opacity:calc(1 - var(--p) * 6);animation:fadeUp 1s 1.2s backwards}
-.mouse{width:22px;height:34px;border:2px solid var(--ivory);border-radius:12px;position:relative}
-.wheel{position:absolute;left:50%;top:6px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:var(--green);animation:wheel 1.6s ease-in-out infinite}
-@keyframes wheel{0%{opacity:0;transform:translateY(-3px)}30%{opacity:1}100%{opacity:0;transform:translateY(10px)}}
+/* invito a scorrere: pillola oro con freccia che rimbalza */
+.scroll-hint{display:inline-flex;align-items:center;gap:10px;padding:11px 20px 11px 22px;border:2px solid var(--gold);border-radius:999px;
+  background:rgba(36,8,15,.6);color:var(--gold-l);font-family:var(--serif);font-weight:700;font-size:clamp(16px,4.3vw,19px);letter-spacing:.01em;
+  box-shadow:0 0 0 4px rgba(201,162,74,.12),0 10px 26px -10px rgba(0,0,0,.7);-webkit-tap-highlight-color:transparent;
+  opacity:calc(1 - var(--p) * 6);animation:fadeUp 1s 1.2s backwards,hintBounce 2s 2.2s ease-in-out infinite;
+  transition:background .25s,color .25s,border-color .25s}
+.scroll-hint:hover,.scroll-hint:focus-visible{background:var(--gold);color:var(--ink);border-color:var(--gold-l);outline:none}
+.sh-arr{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--gold);color:var(--ink);font-size:17px;line-height:1;
+  animation:arrBounce 1s ease-in-out infinite}
+.scroll-hint:hover .sh-arr,.scroll-hint:focus-visible .sh-arr{background:var(--ink);color:var(--gold-l)}
+@keyframes hintBounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}45%{transform:translateY(0)}52%{transform:translateY(-2px)}}
+@keyframes arrBounce{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
 
 /* ---------- epoche (momento a schermo intero) ---------- */
 .eras{position:relative;height:220vh;--e:0;--in:0}
@@ -211,6 +217,13 @@ main,footer{position:relative;z-index:3}
 .btns .ripple{background:rgba(255,255,255,.45)}
 .btn.b-wa,.btn.b-pr,.btn.b-form,.btn.b-ig{border-width:2px}
 @media (min-width:900px){.btn.b-pr{grid-column:1 / -1}}
+/* nota sopra il pulsante WhatsApp */
+.wa-note{margin:6px 4px -6px;font-size:15px;line-height:1.4;color:var(--gold-l);font-style:italic}
+.wa-note::before{content:"★ ";font-style:normal;color:var(--gold)}
+@media (min-width:900px){
+  .wa-note{grid-column:2;grid-row:1;align-self:end;margin:0 4px -8px}
+  .btn.b-form{grid-column:1;grid-row:2}.btn.b-wa{grid-column:2;grid-row:2}
+}
 /* email di contatto sotto i pulsanti */
 .mails{list-style:none;margin:28px auto 0;padding:0;text-align:center;font-size:14px;line-height:1.5;color:rgba(247,240,225,.8);display:grid;gap:6px;max-width:100%}
 .mails li{overflow-wrap:anywhere}

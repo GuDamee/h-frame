@@ -14,6 +14,13 @@
     if (!href || !/^https?:/.test(href)) a.removeAttribute('target'); // segnaposto o pagina del sito: stessa scheda
   });
   $('#y').textContent = new Date().getFullYear();
+  // "Scorri per i contatti": scorrimento morbido fino ai pulsanti, senza aggiungere #links all'URL
+  const hint = $('.scroll-hint');
+  if (hint) hint.addEventListener('click', e => {
+    e.preventDefault();
+    const rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    $('#links').scrollIntoView({ behavior: rm ? 'auto' : 'smooth', block: 'start' });
+  });
 
   /* ---------- lingua (testi in /i18n.js) ---------- */
   const DICT = window.HFRAME_I18N || {};
